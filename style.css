@@ -1388,11 +1388,11 @@ section:not(.split-hero) {
   position: absolute;
   bottom: -24px;
   right: -24px;
-  background: linear-gradient(135deg, var(--orange), var(--orange-light));
+  background: linear-gradient(135deg, #dfb76c, #b88d40); /* Premium Gold gradient background */
   border-radius: var(--radius);
   padding: 20px 28px;
   text-align: center;
-  box-shadow: var(--shadow-orange);
+  box-shadow: 0 10px 30px rgba(223, 183, 108, 0.3);
 }
 
 .ab-num {
@@ -1400,13 +1400,15 @@ section:not(.split-hero) {
   font-family: var(--font-head);
   font-size: 2.5rem;
   font-weight: 900;
-  color: var(--text-light);
+  color: #140808; /* Dark cocoa for readability */
 }
 
 .ab-label {
   font-size: 0.8rem;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  color: #140808; /* Dark cocoa for readability */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .about-desc {
@@ -2533,8 +2535,9 @@ section:not(.split-hero) {
 
   .hero-chef-hat {
     font-size: 2.2rem;
-    top: 4px;
-    left: 0;
+    position: relative;
+    top: 40px; /* Nudges it down below Oriental */
+    left: -100px; /* Nudges it left next to Bakery */
   }
 
   .btn-explore-cakes {
