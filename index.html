@@ -1,569 +1,2567 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oriental Bakery Ulikkal | Premium Live Cake – Ulikkal Town</title>
-  <meta name="description" content="Oriental Live Cake – Premium artisan cakes, custom orders & live cake making in Ulikkal Town, 670705. Celebrate every moment with us."/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swastik Group | Homestay and Resorts Somwarpet</title>
+    <meta name="description" content="Swastik Group - Leading construction materials supplier. Also home to Swastiks Homestay and Resorts, Somwarpet, Coorg.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    /* Cloud product extras */
+    .cloud-badge{position:absolute;top:10px;left:10px;background:linear-gradient(135deg,#ff6b35,#f7931e);color:#fff;font-size:0.65rem;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:1px;}
+    .product-cat-tag{font-size:0.72rem;color:#ff6b35;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;font-weight:600;}
+    .cloud-filter-bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
+    .cloud-filter-btn{padding:7px 18px;border-radius:20px;border:1px solid rgba(0,0,0,0.15);background:transparent;color:#555;font-size:0.82rem;cursor:pointer;transition:all .2s;font-family:inherit;}
+    .cloud-filter-btn.active,.cloud-filter-btn:hover{background:#e05a1e;border-color:#e05a1e;color:#fff;}
+
+    /* Blossom Resort Campus Section Extras */
+    #site-resort .blossom-category {
+        margin-bottom: 60px;
+    }
+    #site-resort .blossom-cat-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2.2rem;
+        margin-bottom: 25px;
+        color: var(--primary); /* Deep Forest Green */
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        letter-spacing: 1px;
+        border-bottom: 2px solid var(--accent); /* Gold Accent */
+        padding-bottom: 10px;
+    }
+    #site-resort .blossom-video-item {
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: var(--shadow);
+        grid-column: span 2;
+        height: 100%;
+        min-height: 240px;
+    }
+    #site-resort .blossom-video-item video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+<!-- SITE SWITCHER SCRIPT -->
+<script>
+function switchSite(name) {
+    const main = document.getElementById('site-main');
+    const resort = document.getElementById('site-resort');
+    const badge = document.getElementById('hotelCalloutBadge');
+    const taxiBadge = document.getElementById('taxiCalloutBadge');
+    const groupBadge = document.getElementById('groupCalloutBadge');
+    const resortBadge = document.getElementById('resortCalloutBadge');
+    
+    if (name === 'resort') {
+        main.style.display = 'none';
+        resort.style.display = 'block';
+        document.title = 'Swastiks Homestay and Resorts | Somwarpet, Coorg';
+        if (badge) badge.style.display = 'none';
+        if (taxiBadge) taxiBadge.style.display = 'none';
+        if (groupBadge) groupBadge.style.display = 'flex';
+        if (resortBadge) resortBadge.style.display = 'flex';
+    } else {
+        resort.style.display = 'none';
+        main.style.display = 'block';
+        document.title = 'Swastik Group | Construction Materials';
+        if (badge) badge.style.display = 'flex';
+        if (taxiBadge) taxiBadge.style.display = 'flex';
+        if (groupBadge) groupBadge.style.display = 'none';
+        if (resortBadge) resortBadge.style.display = 'none';
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
 
+<div id="site-main">
 
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <svg class="logo-cake-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- Plate/Stand (Yellow & Orange) -->
-          <path d="M20,82 L80,82 C80,82 75,88 50,88 C25,88 20,82 20,82 Z" fill="#FFD200" />
-          <rect x="46" y="82" width="8" height="8" fill="#FF6B00" />
-          <path d="M35,90 L65,90 C65,90 60,93 50,93 C40,93 35,90 35,90 Z" fill="#FFD200" />
-          
-          <!-- Cake Base Layer (Chocolate/Black & White Cream) -->
-          <path d="M25,58 L75,58 L73,82 L27,82 Z" fill="#0B0B0B" />
-          <!-- Cream Layer 1 (White) -->
-          <rect x="25.5" y="68" width="49" height="4" fill="#FFFFFF" />
-          
-          <!-- Cake Top Layer (Orange & Yellow) -->
-          <path d="M30,36 L70,36 L68,58 L32,58 Z" fill="#FF6B00" />
-          <!-- Cream Layer 2 (White) -->
-          <rect x="31" y="45" width="38" height="3" fill="#FFFFFF" />
-          
-          <!-- Glaze/Drip (Yellow) -->
-          <path d="M30,36 Q35,42 40,36 Q45,42 50,36 Q55,42 60,36 Q65,42 70,36 L70,40 Q65,46 60,40 Q55,46 50,40 Q45,46 40,40 Q35,46 30,40 Z" fill="#FFD200" />
-          
-          <!-- Candles/Toppings (White & Orange/Yellow flames) -->
-          <!-- Candle 1 -->
-          <rect x="43" y="24" width="3" height="12" fill="#FFFFFF" />
-          <path d="M44.5,14 C46,19 43,24 44.5,24 C46,24 43,19 44.5,14 Z" fill="#FFD200" />
-          <!-- Candle 2 -->
-          <rect x="54" y="24" width="3" height="12" fill="#FFFFFF" />
-          <path d="M55.5,14 C57,19 54,24 55.5,24 C57,24 54,19 55.5,14 Z" fill="#FF6B00" />
-        </svg>
-        <div class="logo-text">
-          <span class="logo-main" style="font-family: var(--font-head); text-transform: none; letter-spacing: 0;">Oriental Bakery Ulikkal</span>
-          <span class="logo-sub">Live Cake</span>
-        </div>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#menu">CAKES</a></li>
-        <li><a href="#bakingStory">GALLERY</a></li>
-        <li><a href="#testimonials">REVIEWS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-      <div class="nav-icons-wrapper">
-        <button class="hamburger-new" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
+    <!-- Header / Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-building"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Swastik</span>
+                    <span class="brand-tag" style="color: white; font-size: 0.6rem; letter-spacing: 3px;">GROUP</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links" id="navLinks">
+                <a href="#" class="active">HOME</a>
+                <a href="#about">ABOUT US</a>
+                <a href="#products">PRODUCTS <i class="fa-solid fa-chevron-down text-small"></i></a>
+                <a href="#services">SERVICES <i class="fa-solid fa-chevron-down text-small"></i></a>
+                <a href="javascript:void(0)" class="properties-trigger-btn">REAL ESTATE</a>
+                <a href="#blog">BLOG</a>
+                <a href="javascript:void(0)" onclick="switchSite('resort')">HOMESTAY & RESORTS</a>
+                <a href="javascript:void(0)" class="nav-contact-btn contact-trigger-btn">CONTACT US</a>
 
-  <!-- ===== SPLIT HERO ===== -->
-  <section id="home" class="split-hero">
-    <div class="hero-left-dark">
-      <div class="hero-left-content-wrapper">
-        <div class="hero-slide-text active">
-          <h1 class="hero-title-split">
-            <span class="split-sub-italic">“45 Years of Baking Happiness”</span>
-            <div class="hero-title-row">
-              <span class="split-main-bold">ORIENTAL<br/>BAKERY ULIKKAL</span>
-              <span class="hero-chef-hat">&#x1F9D1;&#x200D;&#x1F373;</span>
+                <!-- Mobile: Open Hotel Modal Button -->
+                <button id="mobileHotelBtn" style="display:none; background: linear-gradient(135deg,#ff8c00,#ff5400); color:#fff; border:none; padding:10px 20px; border-radius:50px; font-size:0.85rem; font-weight:700; letter-spacing:1px; cursor:pointer; margin-top:5px; text-transform:uppercase;">
+                    🏨 Our Hotel &amp; Restaurant
+                </button>
+
+                <!-- Mobile: Open Taxi Modal Button -->
+                <button id="mobileTaxiBtn" style="display:none; background: linear-gradient(135deg, #ffd700, #ff8c00); color:#000; border:none; padding:10px 20px; border-radius:50px; font-size:0.85rem; font-weight:700; letter-spacing:1px; cursor:pointer; margin-top:5px; text-transform:uppercase;">
+                    🚕 Swastiks Taxi Service
+                </button>
+
+                <!-- Mobile Only Helpline -->
+                <div class="mobile-helpline">
+                    <span class="helpline-title">CONTACT HELPLINE</span>
+                    <a href="tel:8073791263" class="helpline-number"><i class="fa-solid fa-phone shake-ring" style="color: var(--primary); margin-right: 5px;"></i> +91 8073791263</a>
+                    <a href="tel:9632021606" class="helpline-number"><i class="fa-solid fa-phone shake-ring" style="color: var(--primary); margin-right: 5px;"></i> +91 96320 21606</a>
+                </div>
+</nav>
+
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="nav-actions">
+                <div class="helpline">
+                    <div class="helpline-icon shake-ring contact-trigger-btn"><i class="fa-solid fa-phone"></i></div>
+                    <div class="helpline-text">
+                        <span class="helpline-title">CONTACT US</span>
+                        <div class="helpline-numbers">
+                            <a href="tel:8073791263" class="helpline-number">+91 8073791263</a>
+                            <span class="helpline-separator">/</span>
+                            <a href="tel:9632021606" class="helpline-number">+91 96320 21606</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </h1>
-          <p class="hero-desc-split">
-           More than a bakery, we are a tradition of quality, flavor, and trust passed through generations.
-          </p>
         </div>
-      </div>
+    </header>
 
-      <div class="hero-bottom-actions">
-        <div class="scroll-down-wrapper">
-          <span class="scroll-text">SCROLL DOWN</span>
-          <div class="scroll-line"></div>
-          <div class="scroll-mouse">
-            <span class="mouse-wheel"></span>
-          </div>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Left Black Panel: Text -->
+        <div class="hero-left">
+            <div class="hero-left-content">
+                <div class="hero-subtitle"><span class="orange-square"></span>BUILDING TOMORROW</div>
+                <h1 class="hero-title">STRONG<br><span class="highlight">FOUNDATION</span><br>STRONGER FUTURE</h1>
+                <p class="hero-desc">We are the best enterprise and best construction items selling team.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">EXPLORE PRODUCTS <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="javascript:void(0)" class="btn btn-outline quote-trigger-btn">GET A QUOTE</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Image Panel -->
+        <div class="hero-right">
+            <!-- Fade overlay from right image into center black -->
+            <div class="hero-fade-overlay"></div>
+        </div>
+
+    </section>
+
+    <!-- Features Bar Section -->
+    <section class="section features-section bg-dark">
+        <div class="container">
+            <div class="features-bar">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="feature-text">
+                        <h4>Premium Quality</h4>
+                        <p>Top grade materials from trusted brands</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="feature-text">
+                        <h4>Timely Delivery</h4>
+                        <p>On-time delivery at your doorstep</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
+                    <div class="feature-text">
+                        <h4>Best Price</h4>
+                        <p>Competitive pricing guaranteed</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-text">
+                        <h4>Expert Support</h4>
+                        <p>Professional support for every project</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <p class="section-subtitle">OUR CATEGORIES</p>
+                    <h2 class="section-title">Everything You Need<br>For Your <span class="highlight">Construction</span></h2>
+                </div>
+                <a href="#" class="btn btn-outline-dark">VIEW ALL PRODUCTS <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="acc cement.jpg" alt="Cement">
+                    <div class="category-info">
+                        <h3>CEMENT</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="meenashi tmt image.png" alt="TMT Steel">
+                    <div class="category-info">
+                        <h3>TMT STEEL</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="bricks_blocks.png" alt="Bricks &amp; Blocks">
+                    <div class="category-info">
+                        <h3>BRICKS &amp; BLOCKS</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="bmm.jpg" alt="BMM Steel">
+                    <div class="category-info">
+                        <h3>BMM STEEL</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="Maha-cement .jpg" alt="Maha Cement">
+                    <div class="category-info">
+                        <h3>MAHA CEMENT</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="about_img.png" alt="More Products">
+                    <div class="category-info">
+                        <h3>VIEW MORE</h3>
+                        <div class="cat-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Brands Marquee Section -->
+    <section class="brands-section" id="brands">
+        <div class="container brands-header">
+            <div class="brands-title">
+                <div class="line"></div>
+                <span>OUR TRUSTED BRANDS</span>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="brands-marquee-wrapper">
+            <div class="brands-marquee">
+                <!-- Track 1 -->
+                <div class="brands-track">
+                    <div class="brand-logo-item">
+                        <img src="acc logo.png" alt="ACC Cement">
+                        <p>ACC Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="maha logo.png" alt="Maha Cement">
+                        <p>Maha Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="meenashi logo.png" alt="Meenashi TMT">
+                        <p>Meenashi TMT</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="bmm logo.png" alt="BMM Steel">
+                        <p>BMM Steel</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="acc logo.png" alt="ACC Cement">
+                        <p>ACC Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="maha logo.png" alt="Maha Cement">
+                        <p>Maha Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="meenashi logo.png" alt="Meenashi TMT">
+                        <p>Meenashi TMT</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="bmm logo.png" alt="BMM Steel">
+                        <p>BMM Steel</p>
+                    </div>
+                </div>
+                <!-- Duplicate Track for seamless loop -->
+                <div class="brands-track" aria-hidden="true">
+                    <div class="brand-logo-item">
+                        <img src="acc logo.png" alt="ACC Cement">
+                        <p>ACC Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="maha logo.png" alt="Maha Cement">
+                        <p>Maha Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="meenashi logo.png" alt="Meenashi TMT">
+                        <p>Meenashi TMT</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="bmm logo.png" alt="BMM Steel">
+                        <p>BMM Steel</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="acc logo.png" alt="ACC Cement">
+                        <p>ACC Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="maha logo.png" alt="Maha Cement">
+                        <p>Maha Cement</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="meenashi logo.png" alt="Meenashi TMT">
+                        <p>Meenashi TMT</p>
+                    </div>
+                    <div class="brand-logo-item">
+                        <img src="bmm logo.png" alt="BMM Steel">
+                        <p>BMM Steel</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-content">
+                <p class="section-subtitle">ABOUT US</p>
+                <h2 class="section-title">Your Partner in<br>Every <span class="highlight">Foundation</span></h2>
+                <p class="about-text">We are a leading supplier of high-quality construction materials including cement, TMT steel, aggregates, bricks and more. With a commitment to quality and customer satisfaction, we help you build stronger, safer and longer-lasting structures.</p>
+                
+                <ul class="about-list">
+                    <li><i class="fa-solid fa-check text-primary"></i> Quality Assured Products</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Wide Range of Construction Materials</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Timely Delivery Across Locations</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Expert Guidance & Support</li>
+                </ul>
+
+                <a href="#" class="btn btn-outline-dark mt-4">KNOW MORE ABOUT US <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="about-image-wrapper">
+                <img src="about_img.png" alt="About Swastik Group" class="about-main-img">
+                <div class="quality-badge">
+                    <div class="badge-icon"><i class="fa-solid fa-medal"></i></div>
+                    <div class="badge-text">
+                        <h4>Quality That</h4>
+                        <p>Builds Trust</p>
+                    </div>
+                </div>
+                <div class="experience-stats">
+                    <div class="stat-box">
+                        <h3>15+</h3>
+                        <p>YEARS OF EXPERIENCE</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>1000+</h3>
+                        <p>HAPPY CUSTOMERS</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>500+</h3>
+                        <p>SUCCESSFUL PROJECTS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Sellers Section -->
+    <section class="section best-sellers bg-light">
+        <div class="container">
+            <p class="section-subtitle">OUR BEST SELLERS</p>
+            <div class="section-header">
+                <h2 class="section-title">Top Construction Materials</h2>
+                <div class="nav-arrows">
+                    <button class="arrow-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="arrow-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-img"><img src="acc cement.jpg" alt="ACC Cement"></div>
+                    <div class="product-details">
+                        <h4>ACC PPC Cement</h4>
+                        <button class="btn btn-outline-primary full-width">ENQUIRE NOW <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="meenashi tmt image.png" alt="Meenashi TMT"></div>
+                    <div class="product-details">
+                        <h4>Meenashi TMT Bar</h4>
+                        <button class="btn btn-outline-primary full-width">ENQUIRE NOW <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="bricks_blocks.png" alt="Product"></div>
+                    <div class="product-details">
+                        <h4>Solid Concrete Block</h4>
+                        <button class="btn btn-outline-primary full-width">ENQUIRE NOW <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img"><img src="Maha-cement .jpg" alt="Maha Cement"></div>
+                    <div class="product-details">
+                        <h4>Maha Cement</h4>
+                        <button class="btn btn-outline-primary full-width">ENQUIRE NOW <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="section video-section" id="projects">
+        <div class="container text-center">
+            <div class="section-title-wrap mb-4" style="text-align: center; margin-bottom: 30px;">
+                <p class="section-subtitle">OUR SHOP</p>
+                <h2 class="section-title">The Foundation Behind Every <span class="highlight">Landmark</span></h2>
+            </div>
+            <div class="video-container" style="max-width: 900px; margin: 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <video width="100%" controls autoplay muted loop>
+                    <source src="project_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects Showcase Section -->
+    <section class="section projects-gallery bg-white" id="completed-projects">
+        <div class="container">
+            <p class="section-subtitle">OUR MASTERPIECES</p>
+            <h2 class="section-title">Completed <span class="highlight">Projects</span></h2>
+            <p class="section-desc" style="max-width: 600px; margin: 10px 0 30px 0; color: var(--text-muted);">
+                Take a look at some of our recently completed residential and commercial projects built with Swastik materials and planning.
+            </p>
+            
+            <div class="projects-showcase-grid">
+                <div class="project-showcase-card">
+                    <div class="project-showcase-img">
+                        <img src="finished project.jpeg" alt="Completed Luxury Residential Project">
+                    </div>
+                    <div class="project-showcase-info">
+                        <span class="project-tag">House</span>
+                        <h4>Completed House</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Somwarpet, Coorg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architectural Planning & 3D Visualization Section -->
+    <section class="section architecture-section bg-light" id="architecture">
+        <div class="container architecture-grid">
+            <div class="architecture-content">
+                <p class="section-subtitle">DESIGN &amp; MODELING</p>
+                <h2 class="section-title">Architectural Planning<br>&amp; <span class="highlight">3D Visualization</span></h2>
+                <p class="architecture-desc mt-3">We design and build house and buildings plan and 3D models. From initial concepts to high-end realistic renders, we bring your vision to life.</p>
+                
+                <div class="architecture-services-grid mt-4">
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Architectural Design</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Building Planning</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Residential Design</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-building"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Commercial Building Design</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-map"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Floor Plan Development</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Site Planning</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                        <div class="arch-service-info">
+                            <h4>Concept Design</h4>
+                        </div>
+                    </div>
+                    <div class="arch-service-card">
+                        <div class="arch-service-icon"><i class="fa-solid fa-cube"></i></div>
+                        <div class="arch-service-info">
+                            <h4>3D Modeling &amp; Rendering</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="architecture-cta mt-4">
+                    <a href="javascript:void(0)" class="btn btn-primary quote-trigger-btn">DISCUSS YOUR PROJECT <i class="fa-solid fa-comment-dots"></i></a>
+                </div>
+            </div>
+            <div class="architecture-image-wrapper">
+                <div class="arch-img-stack">
+                    <div class="arch-img-1">
+                        <img src="house_plan_drawing.png" alt="2D House Plan Drawing">
+                        <div class="arch-img-label">2D House Plan</div>
+                    </div>
+                    <div class="arch-img-2">
+                        <img src="architecture_3d_render.png" alt="3D Realistic Render">
+                        <div class="arch-img-label">3D Realization</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Delivery Range Section -->
+    <section class="delivery-section" id="delivery">
+        <div class="container">
+            <div class="delivery-header">
+                <p class="section-subtitle">FAST DELIVERY</p>
+                <h2 class="section-title">We Deliver To Your <span class="highlight">Doorstep</span></h2>
+                <p class="delivery-sub">Drag the truck to see our delivery coverage. We deliver construction materials directly to your site.</p>
+            </div>
+
+            <!-- KM Display -->
+            <div class="km-display">
+                <div class="km-badge">
+                    <span class="km-number" id="kmNumber">1</span>
+                    <span class="km-unit">KM</span>
+                </div>
+                <p class="km-label" id="kmLabel">Local Delivery</p>
+            </div>
+
+            <!-- Road Track -->
+            <div class="road-wrapper" id="roadWrapper">
+                <!-- KM Markers -->
+                <div class="km-markers">
+                    <div class="km-mark" style="left:0%"><span>0</span></div>
+                    <div class="km-mark" style="left:6.67%"><span>1 km</span></div>
+                    <div class="km-mark" style="left:20%"><span>3 km</span></div>
+                    <div class="km-mark" style="left:33.33%"><span>5 km</span></div>
+                    <div class="km-mark" style="left:66.67%"><span>10 km</span></div>
+                    <div class="km-mark" style="left:100%"><span>15 km</span></div>
+                </div>
+
+                <!-- Road -->
+                <div class="road">
+                    <div class="road-line"></div>
+                    <div class="road-progress" id="roadProgress"></div>
+                    <!-- Snap dots on road -->
+                    <div class="snap-dot" style="left:6.67%"></div>
+                    <div class="snap-dot" style="left:20%"></div>
+                    <div class="snap-dot" style="left:33.33%"></div>
+                    <div class="snap-dot" style="left:66.67%"></div>
+                    <div class="snap-dot" style="left:100%"></div>
+
+                    <!-- The Draggable Truck -->
+                    <div class="truck-wrapper" id="truckWrapper">
+                        <div class="truck-tooltip" id="truckTooltip">1 km</div>
+                        <!-- Real Truck Image -->
+                        <div class="truck-img-wrap">
+                            <img src="truk.png" alt="Swastik Delivery Truck" class="truck-img" id="truckImg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Range Info Cards -->
+                <div class="range-cards">
+                    <div class="range-card active" data-km="1">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>1 km</span>
+                        <small>Local</small>
+                    </div>
+                    <div class="range-card" data-km="3">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>3 km</span>
+                        <small>Nearby</small>
+                    </div>
+                    <div class="range-card" data-km="5">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>5 km</span>
+                        <small>Zone A</small>
+                    </div>
+                    <div class="range-card" data-km="10">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>10 km</span>
+                        <small>Zone B</small>
+                    </div>
+                    <div class="range-card" data-km="15">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>15 km</span>
+                        <small>Extended</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container">
+            <div class="cta-left">
+                <div class="cta-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                <div class="cta-text">
+                    <p>Have a Project in Mind?</p>
+                    <h2>Let's Build Something Great Together!</h2>
+                </div>
+            </div>
+            <div class="cta-right">
+                <a href="javascript:void(0)" class="btn btn-primary quote-trigger-btn">REQUEST A QUOTE <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section class="map-section" id="contact">
+        <div class="container map-flex">
+            <div class="map-details">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="mb-4">We are the best enterprise and best construction items selling team. Contact us for all your building needs.</p>
+                <ul class="contact-list">
+                    <li>
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-info-text">
+                            <strong>Location</strong>
+                            <p>Madikeri Main Road, Nagaroor, Somwarpet, Karnataka 571236, Near Coffee District.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-info-text">
+                            <p><a href="tel:8073791263">+91 8073791263</a> / <a href="tel:9632021606">+91 96320 21606</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-info-text">
+                            <strong>Email</strong>
+                            <p><a href="mailto:swastiktraders1114@gmail.com">swastiktraders1114@gmail.com</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="map-iframe-container" style="position: relative;">
+                <a href="https://www.google.com/maps/place/Madikeri+Main+Road,+Nagaroor,+Somwarpet,+Karnataka+571236/@12.5973715,75.8340474,17z/" target="_blank" class="map-overlay-link" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; cursor: pointer;"></a>
+                <iframe 
+                    src="https://maps.google.com/maps?q=Madikeri+Main+Road,+Nagaroor,+Somwarpet,+Karnataka+571236&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0; border-radius: 8px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col brand-col">
+                <a href="#" class="logo footer-logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="brand-name">Swastik</span>
+                        <span class="brand-tag">GROUP</span>
+                    </div>
+                </a>
+                <p class="footer-desc">Your trusted partner for quality construction materials and complete building solutions.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61590883978461" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/swastik_traders_coorg/reels/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>PRODUCTS</h3>
+                <ul>
+                    <li><a href="#">Cement</a></li>
+                    <li><a href="#">TMT Steel</a></li>
+                    <li><a href="#">Steel & Iron</a></li>
+                    <li><a href="#">Aggregates</a></li>
+                    <li><a href="#">Bricks & Blocks</a></li>
+                    <li><a href="#">Chemicals</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>COMPANY</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#completed-projects">Our Projects</a></li>
+                    <li><a href="javascript:void(0)" class="properties-trigger-btn">Real Estate</a></li>
+                    <li><a href="#">Our Brands</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchSite('resort')">Homestay and Resorts</a></li>
+                    <li><a href="javascript:void(0)" class="contact-trigger-btn">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h3>SERVICES</h3>
+                <ul>
+                    <li><a href="#">Material Supply</a></li>
+                    <li><a href="#">Bulk Supply</a></li>
+                    <li><a href="#">Logistics Support</a></li>
+                    <li><a href="#">Site Support</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col contact-col">
+                <h3>CONTACT US</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Madikeri Main Road, Nagaroor,<br>Somwarpet, Karnataka 571236,<br>Near Coffee District.</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <p><a href="tel:8073791263">+91 8073791263</a><br><a href="tel:9632021606">+91 96320 21606</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <p><a href="mailto:swastiktraders1114@gmail.com">swastiktraders1114@gmail.com</a></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <p>Mon - Sat: 9:00 AM - 7:00 PM</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Swastik Group. All Rights Reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+<!-- Quote Request Modal -->
+<div class="quote-modal-overlay" id="quoteModal">
+    <div class="quote-modal-content">
+        <button class="quote-modal-close" id="closeQuoteModal"><i class="fa-solid fa-xmark"></i></button>
+        <h3 style="font-size: 1.8rem; margin-bottom: 10px; color: var(--primary);">Request a Quote</h3>
+        <p style="margin-bottom: 20px; color: #666; font-size: 0.9rem;">Fill out the details below to send us your requirements via WhatsApp.</p>
+        <div class="quote-form-group">
+            <label for="quoteName">Your Name</label>
+            <input type="text" id="quoteName" placeholder="Enter your name">
+        </div>
+        <div class="quote-form-group">
+            <label for="quotePlace">Your Place / Location</label>
+            <input type="text" id="quotePlace" placeholder="Enter your city or area">
+        </div>
+        <div class="quote-form-group">
+            <label for="quoteNeed">Your Requirement</label>
+            <textarea id="quoteNeed" rows="3" placeholder="E.g. 50 bags of ACC cement..."></textarea>
+        </div>
+        <button class="btn btn-primary full-width" id="sendWhatsAppBtn">SEND VIA WHATSAPP <i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+</div>
+
+<!-- Hotel & Restaurant Widget Callout -->
+<div class="hotel-callout-badge" id="hotelCalloutBadge">
+    Our Hotel, Take a Look <i class="fa-solid fa-arrow-right"></i>
+</div>
+
+<!-- Hotel Widget -->
+<a href="javascript:void(0)" onclick="switchSite('resort')" class="hotel-widget" style="text-decoration: none;">
+    <div class="hotel-tab">
+        <span class="hotel-tab-sub">Our Associated Venture</span>
+        <span class="hotel-tab-title">Swastiks Homestay and Resorts</span>
+        <i class="fa-solid fa-chevron-left hotel-icon"></i>
+    </div>
+    <div class="hotel-img-wrap">
+        <img src="l2.png" alt="Swastiks Homestay and Resorts">
+    </div>
+</a>
+
+<!-- Taxi Service Widget Callout -->
+<div class="taxi-callout-badge contact-trigger-btn" id="taxiCalloutBadge">
+    <i class="fa-solid fa-phone shake-ring"></i> Call Now
+</div>
+
+<!-- Taxi Service Widget (LEFT POP-OUT) -->
+<a href="javascript:void(0)" id="taxiWidgetTrigger" class="taxi-widget" style="text-decoration: none;">
+    <div class="taxi-img-wrap">
+        <img src="taxi_car.png" alt="Swastiks Taxi Service">
+    </div>
+    <div class="taxi-tab">
+        <span class="taxi-tab-sub">24/7 Cab Service</span>
+        <span class="taxi-tab-title">Swastiks Taxi Service</span>
+        <i class="fa-solid fa-chevron-right taxi-icon"></i>
+    </div>
+</a>
+
+<!-- Featured Property Widget (LEFT POP-OUT, below Taxi) -->
+<a href="javascript:void(0)" id="propertyWidgetTrigger" class="property-widget properties-trigger-btn" style="text-decoration: none;">
+    <div class="property-widget-img-wrap">
+        <img src="prop_estate.png" alt="Swastik Properties">
+    </div>
+    <div class="property-widget-tab">
+        <span class="property-widget-tab-sub">Properties for Sale</span>
+        <span class="property-widget-tab-title">Land &amp; Properties</span>
+        <i class="fa-solid fa-chevron-right property-widget-icon"></i>
+    </div>
+</a>
+
+
+<script>
+(function () {
+    const truck    = document.getElementById('truckWrapper');
+    const road     = document.querySelector('.road');
+    const progress = document.getElementById('roadProgress');
+    const tooltip  = document.getElementById('truckTooltip');
+    const kmNumber = document.getElementById('kmNumber');
+    const kmLabel  = document.getElementById('kmLabel');
+    const cards    = document.querySelectorAll('.range-card');
+
+    if (!truck || !road) return;
+
+    // KM snap points: {km, pct of road width}
+    const snaps = [
+        { km: 0,  pct: 0 },
+        { km: 1,  pct: 6.67 },
+        { km: 3,  pct: 20 },
+        { km: 5,  pct: 33.33 },
+        { km: 10, pct: 66.67 },
+        { km: 15, pct: 100 }
+    ];
+
+    const labels = {
+        0:  'Starting Point',
+        1:  'Local Delivery',
+        3:  'Nearby Delivery',
+        5:  'Zone A Delivery',
+        10: 'Zone B Delivery',
+        15: 'Extended Delivery'
+    };
+
+    let isDragging = false;
+    let currentKm = 1;
+
+    // Wheel spin animation
+    const spokes = document.querySelectorAll('.truck-spoke');
+    let spinAngle = 0;
+    let spinRAF;
+
+    function spinWheels(speed) {
+        spinAngle += speed;
+        spokes.forEach(sp => {
+            const parent = sp.parentElement;
+            // We rotate each pair of spokes around their wheel centre
+        });
+        // Rotate entire wheel groups via CSS transform
+        const wheels = document.querySelectorAll('.truck-wheel');
+        wheels.forEach(w => {
+            w.style.transformOrigin = 'center';
+        });
+        truck.querySelectorAll('circle').forEach(c => c.style.transform = '');
+    }
+
+    function setKm(km, animate = true) {
+        currentKm = km;
+        const snap = snaps.find(s => s.km === km) || snaps[1];
+        moveTruckToPct(snap.pct, animate);
+        updateUI(km);
+    }
+
+    function moveTruckToPct(pct, animate) {
+        const roadW = road.offsetWidth;
+        const truckW = truck.offsetWidth;
+        const maxLeft = roadW - truckW;
+        const px = Math.max(0, Math.min((pct / 100) * roadW - truckW / 2, maxLeft));
+
+        truck.style.transition = animate ? 'left 0.55s cubic-bezier(0.4,0,0.2,1)' : 'none';
+        truck.style.left = px + 'px';
+        progress.style.transition = animate ? 'width 0.55s cubic-bezier(0.4,0,0.2,1)' : 'none';
+        progress.style.width = Math.min(pct, 100) + '%';
+    }
+
+    function updateUI(km) {
+        kmNumber.textContent = km;
+        kmLabel.textContent = labels[km] || km + ' km Range';
+        tooltip.textContent = km + ' km';
+
+        // Animate km number
+        kmNumber.classList.remove('km-pop');
+        void kmNumber.offsetWidth;
+        kmNumber.classList.add('km-pop');
+
+        // Update cards
+        cards.forEach(c => {
+            c.classList.toggle('active', parseInt(c.dataset.km) === km);
+        });
+    }
+
+    function pxToPct(px) {
+        return (px / road.offsetWidth) * 100;
+    }
+
+    function findNearestSnap(pct) {
+        let nearest = snaps[0];
+        let minDist = Infinity;
+        snaps.forEach(s => {
+            const d = Math.abs(s.pct - pct);
+            if (d < minDist) { minDist = d; nearest = s; }
+        });
+        return nearest;
+    }
+
+    function getEventX(e) {
+        return e.touches ? e.touches[0].clientX : e.clientX;
+    }
+
+    let startX, startLeft;
+
+    function onDragStart(e) {
+        isDragging = true;
+        startX = getEventX(e);
+        startLeft = truck.offsetLeft;
+        truck.style.transition = 'none';
+        progress.style.transition = 'none';
+        truck.style.cursor = 'grabbing';
+        e.preventDefault();
+    }
+
+    function onDragMove(e) {
+        if (!isDragging) return;
+        const dx = getEventX(e) - startX;
+        const roadW = road.offsetWidth;
+        const truckW = truck.offsetWidth;
+        const maxLeft = roadW - truckW;
+        const newLeft = Math.max(0, Math.min(startLeft + dx, maxLeft));
+        truck.style.left = newLeft + 'px';
+
+        const centerPct = pxToPct(newLeft + truckW / 2);
+        const snap = findNearestSnap(centerPct);
+
+        // Live update tooltip & progress (no snap, free drag)
+        const liveKm = Math.round((centerPct / 100) * 15 * 10) / 10;
+        tooltip.textContent = liveKm.toFixed(1) + ' km';
+        progress.style.width = Math.min(centerPct, 100) + '%';
+
+        // Highlight nearest km card
+        cards.forEach(c => c.classList.toggle('active', parseInt(c.dataset.km) === snap.km));
+    }
+
+    function onDragEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        truck.style.cursor = 'grab';
+
+        const roadW = road.offsetWidth;
+        const truckW = truck.offsetWidth;
+        const centerPct = pxToPct(truck.offsetLeft + truckW / 2);
+        const snap = findNearestSnap(centerPct);
+        setKm(snap.km, true);
+    }
+
+    // Mouse events
+    truck.addEventListener('mousedown',  onDragStart);
+    window.addEventListener('mousemove', onDragMove);
+    window.addEventListener('mouseup',   onDragEnd);
+
+    // Touch events
+    truck.addEventListener('touchstart', onDragStart, { passive: false });
+    window.addEventListener('touchmove',  onDragMove, { passive: false });
+    window.addEventListener('touchend',   onDragEnd);
+
+    // Click on range cards
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            setKm(parseInt(card.dataset.km), true);
+        });
+    });
+
+    // Init position
+    window.addEventListener('load', () => { setKm(1, false); });
+    window.addEventListener('resize', () => { setKm(currentKm, false); });
+
+    // Quote Modal Logic
+    const quoteModal = document.getElementById('quoteModal');
+    const closeQuoteModal = document.getElementById('closeQuoteModal');
+    const quoteTriggers = document.querySelectorAll('.quote-trigger-btn');
+    const sendWhatsAppBtn = document.getElementById('sendWhatsAppBtn');
+
+    quoteTriggers.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            quoteModal.style.display = 'flex';
+        });
+    });
+
+    closeQuoteModal.addEventListener('click', () => {
+        quoteModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === quoteModal) {
+            quoteModal.style.display = 'none';
+        }
+    });
+
+    sendWhatsAppBtn.addEventListener('click', () => {
+        const name = document.getElementById('quoteName').value.trim();
+        const place = document.getElementById('quotePlace').value.trim();
+        const need = document.getElementById('quoteNeed').value.trim();
+
+        if (!name || !place || !need) {
+            alert('Please fill in all fields before sending.');
+            return;
+        }
+
+        const message = `Hello Swastik Group! I would like to request a quote.\n\n*Name:* ${name}\n*Location:* ${place}\n*Requirement:* ${need}`;
+        const whatsappUrl = `https://wa.me/918073791263?text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappUrl, '_blank');
+        quoteModal.style.display = 'none';
+        
+        // Reset form
+        document.getElementById('quoteName').value = '';
+        document.getElementById('quotePlace').value = '';
+        document.getElementById('quoteNeed').value = '';
+    });
+
+    // Contact & Modal Initialization on DOM Load
+    document.addEventListener('DOMContentLoaded', () => {
+        // Contact Modal Logic
+        const contactModal = document.getElementById('contactModal');
+        const closeContactModal = document.getElementById('closeContactModal');
+        const contactTriggers = document.querySelectorAll('.contact-trigger-btn');
+
+        if (contactTriggers && contactModal && closeContactModal) {
+            contactTriggers.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    contactModal.style.display = 'flex';
+                });
+            });
+
+            closeContactModal.addEventListener('click', () => {
+                contactModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', (e) => {
+                if (e.target === contactModal) {
+                    contactModal.style.display = 'none';
+                }
+            });
+        }
+
+        // Hotel Modal Logic
+        const hotelCalloutBadge = document.getElementById('hotelCalloutBadge');
+        const mobileHotelBtn = document.getElementById('mobileHotelBtn');
+        const hotelModal = document.getElementById('hotelModal');
+        const closeHotelModal = document.getElementById('closeHotelModal');
+        const hotelPromoVideo = document.getElementById('hotelPromoVideo');
+        const hotelMenuImg = document.getElementById('hotelMenuImg');
+        const menuZoomOverlay = document.getElementById('menuZoomOverlay');
+
+        if (hotelModal && closeHotelModal) {
+            const openModalHandler = () => {
+                hotelModal.style.display = 'flex';
+                if (hotelPromoVideo) {
+                    hotelPromoVideo.currentTime = 0;
+                    hotelPromoVideo.play().catch(err => console.log('Autoplay blocked:', err));
+                }
+            };
+
+            if (hotelCalloutBadge) {
+                hotelCalloutBadge.addEventListener('click', openModalHandler);
+            }
+            if (mobileHotelBtn) {
+                mobileHotelBtn.addEventListener('click', openModalHandler);
+            }
+
+            closeHotelModal.addEventListener('click', () => {
+                hotelModal.style.display = 'none';
+                if (hotelPromoVideo) {
+                    hotelPromoVideo.pause();
+                }
+            });
+
+            hotelModal.addEventListener('click', (e) => {
+                if (e.target === hotelModal) {
+                    hotelModal.style.display = 'none';
+                    if (hotelPromoVideo) {
+                        hotelPromoVideo.pause();
+                    }
+                }
+            });
+        }
+
+        // Menu Zoom Logic
+        if (hotelMenuImg && menuZoomOverlay) {
+            hotelMenuImg.addEventListener('click', () => {
+                menuZoomOverlay.style.display = 'flex';
+            });
+
+            menuZoomOverlay.addEventListener('click', () => {
+                menuZoomOverlay.style.display = 'none';
+            });
+        }
+
+        // Taxi Modal Logic
+        const taxiWidgetTrigger = document.getElementById('taxiWidgetTrigger');
+        const mobileTaxiBtn = document.getElementById('mobileTaxiBtn');
+        const taxiModal = document.getElementById('taxiModal');
+        const closeTaxiModal = document.getElementById('closeTaxiModal');
+
+        if (taxiModal && closeTaxiModal) {
+            const openTaxiModalHandler = (e) => {
+                if (e) e.preventDefault();
+                taxiModal.style.display = 'flex';
+            };
+
+            if (taxiWidgetTrigger) {
+                taxiWidgetTrigger.addEventListener('click', openTaxiModalHandler);
+            }
+            if (mobileTaxiBtn) {
+                mobileTaxiBtn.addEventListener('click', openTaxiModalHandler);
+            }
+            const resortMobileTaxiBtn = document.getElementById('resortMobileTaxiBtn');
+            if (resortMobileTaxiBtn) {
+                resortMobileTaxiBtn.addEventListener('click', openTaxiModalHandler);
+            }
+
+            closeTaxiModal.addEventListener('click', () => {
+                taxiModal.style.display = 'none';
+            });
+
+            taxiModal.addEventListener('click', (e) => {
+                if (e.target === taxiModal) {
+                    taxiModal.style.display = 'none';
+                }
+            });
+        }
+
+        // Properties Modal Logic
+        const propertiesModal = document.getElementById('propertiesModal');
+        const closePropertiesModal = document.getElementById('closePropertiesModal');
+        const propertiesTriggers = document.querySelectorAll('.properties-trigger-btn');
+
+        if (propertiesModal && closePropertiesModal) {
+            const openPropertiesModalHandler = (e) => {
+                if (e) e.preventDefault();
+                propertiesModal.style.display = 'flex';
+            };
+
+            propertiesTriggers.forEach(btn => {
+                btn.addEventListener('click', openPropertiesModalHandler);
+            });
+
+            closePropertiesModal.addEventListener('click', () => {
+                propertiesModal.style.display = 'none';
+            });
+
+            propertiesModal.addEventListener('click', (e) => {
+                if (e.target === propertiesModal) {
+                    propertiesModal.style.display = 'none';
+                }
+            });
+        }
+    });
+
+        // Mobile Nav Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (mobileToggle && navLinks) {
+            mobileToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            });
+
+            // Close mobile menu on clicking links
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    const icon = mobileToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-xmark');
+                        icon.classList.add('fa-bars');
+                    }
+                });
+            });
+        }
+
+        // Navbar Scroll Effect
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            // Initial check
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            }
+        }
+
+        // Available Soon Tooltip/Toast Logic
+        function showToast(message) {
+            let toast = document.getElementById('customToast');
+            if (!toast) {
+                toast = document.createElement('div');
+                toast.id = 'customToast';
+                toast.className = 'toast-notification';
+                toast.innerHTML = `<i class="fa-solid fa-circle-info toast-icon"></i><span class="toast-message"></span>`;
+                document.body.appendChild(toast);
+            }
+            toast.querySelector('.toast-message').textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        document.querySelectorAll('.social-soon').forEach(el => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                showToast('Available Soon!');
+            });
+        });
+})();
+</script>
+
+<!-- Modals moved to bottom of body -->
+
+</div>
+
+<div id="site-resort" style="display:none">
+
+
+    <!-- Header / Navigation -->
+    <header class="navbar" id="resortNavbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-campground"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Swastiks</span>
+                    <span class="brand-tag">Homestay and Resorts</span>
+                </div>
+            </a>
+            
+            <nav class="nav-links" id="resortNavLinks">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#accommodations">Stay</a>
+                <a href="#activities">Activities</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#blossom-campus">Blossom Campus</a>
+                <a href="#book" class="nav-btn">Enquire & Book</a>
+                <a href="javascript:void(0)" class="nav-contact-btn resort-contact-trigger-btn">CONTACT US</a>
+
+                <!-- Mobile: Open Swastik Group Button -->
+                <button id="resortMobileGroupBtn" onclick="switchSite('main')" style="display:none; background: linear-gradient(135deg, #1b3a4b, #2e6f40); color:#fff; border:none; padding:10px 20px; border-radius:50px; font-size:0.85rem; font-weight:700; letter-spacing:1px; cursor:pointer; margin-top:5px; text-transform:uppercase;">
+                    🏗️ Swastik Group
+                </button>
+
+                <!-- Mobile: Open Taxi Modal Button -->
+                <button id="resortMobileTaxiBtn" style="display:none; background: linear-gradient(135deg, #ffd700, #ff8c00); color:#000; border:none; padding:10px 20px; border-radius:50px; font-size:0.85rem; font-weight:700; letter-spacing:1px; cursor:pointer; margin-top:5px; text-transform:uppercase;">
+                    🚕 Swastiks Taxi Service
+                </button>
+            
+                <!-- Mobile Only Helpline -->
+                <div class="mobile-helpline">
+                    <span class="helpline-title">CONTACT HELPLINE</span>
+                    <a href="tel:8073791263" class="helpline-number"><i class="fa-solid fa-phone shake-ring" style="color: #d8b257; margin-right: 5px;"></i> +91 8073791263</a>
+                    <a href="tel:9632021606" class="helpline-number"><i class="fa-solid fa-phone shake-ring" style="color: #d8b257; margin-right: 5px;"></i> +91 96320 21606</a>
+                </div>
+            </nav>
+
+            <button class="mobile-toggle" id="resortMobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="nav-actions">
+                <div class="helpline">
+                    <div class="helpline-icon shake-ring resort-contact-trigger-btn" style="background: rgba(216, 178, 87, 0.1); color: #d8b257;"><i class="fa-solid fa-phone"></i></div>
+                    <div class="helpline-text">
+                        <span class="helpline-title" style="color: rgba(255, 255, 255, 0.6);">CONTACT US</span>
+                        <div class="helpline-numbers">
+                            <a href="tel:8073791263" class="helpline-number" style="color: #fff;">+91 8073791263</a>
+                            <span class="helpline-separator" style="color: rgba(255, 255, 255, 0.4);">/</span>
+                            <a href="tel:9632021606" class="helpline-number" style="color: #fff;">+91 96320 21606</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-carousel">
+            <div class="hero-slide active" style="background-image: url('l2.png');"></div>
+            <div class="hero-slide" style="background-image: url('L 1.png');"></div>
+            <div class="hero-slide" style="background-image: url('l3.png');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <div class="hero-subtitle">Somwarpet, Coorg</div>
+            <h1 class="hero-title">Experience Nature's <br><span style="color: var(--accent);">Purest Embrace</span></h1>
+            <p class="hero-desc">Welcome to Swastiks Homestay and Resorts. A peaceful sanctuary of luxury stays, adventure camping, fishing, and campfire memories in Somwarpet.</p>
+            <div class="hero-btns">
+                <a href="#accommodations" class="btn btn-primary">Explore Stay Option</a>
+                <a href="#book" class="btn btn-outline">Check Availability</a>
+            </div>
+        </div>
+
+        <a href="#about" class="hero-scroll-btn">
+            <i class="fa-solid fa-circle-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container about-grid">
+            <div class="about-left-content">
+                <p class="section-subtitle">Discover Swastiks</p>
+                <h2 class="section-title">Where Serenity <br>Meets Adventure</h2>
+                <p class="section-desc" style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px;">
+                    Located in Somwarpet, Coorg, Swastiks Homestay and Resorts offers a unique combination of peaceful retreat and outdoor excitement. Wake up to the aroma of coffee blossoms, spend your day fishing by the river pond, and end your evening under a canopy of stars by a roaring bonfire.
+                </p>
+                
+                <div class="about-features">
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="about-feature-text">
+                            <h4>Scenic Location</h4>
+                            <p>Surrounded by misty mountains and coffee estates.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon"><i class="fa-solid fa-utensils"></i></div>
+                        <div class="about-feature-text">
+                            <h4>Local Cuisine</h4>
+                            <p>Authentic local recipes prepared fresh by our chef.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon"><i class="fa-solid fa-person-hiking"></i></div>
+                        <div class="about-feature-text">
+                            <h4>Outdoor Activities</h4>
+                            <p>Camping, fishing, trekking, and plantation walks.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature-item">
+                        <div class="about-feature-icon"><i class="fa-solid fa-fire"></i></div>
+                        <div class="about-feature-text">
+                            <h4>Cozy Nights</h4>
+                            <p>Guided campfire experiences under the night sky.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-images-stack">
+                <div class="about-img-1">
+                    <img src="room.png" alt="Resort Villa">
+                </div>
+                <div class="about-img-2">
+                    <img src="room 1.jpeg" alt="Luxury Room">
+                </div>
+                <div class="about-badge">
+                    <h3>Nature</h3>
+                    <p>Escape</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accommodations Section -->
+    <section class="section section-bg-light" id="accommodations">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Stay Options</p>
+                <h2 class="section-title">Rooms & Accommodations</h2>
+                <p class="section-desc">Choose from our range of comfortable stays, from luxury rooms with forest views to rustic camping tents under the sky.</p>
+            </div>
+
+            <div class="acc-grid">
+                <!-- stay 1 -->
+                <div class="acc-card">
+                    <div class="acc-img-wrap">
+                        <span class="acc-tag">Popular</span>
+                        <img src="room 1.jpeg" alt="Premium Cottage Room">
+                    </div>
+                    <div class="acc-body">
+                        <h3>Premium Cottage Room</h3>
+                        <p>Beautifully designed wooden cottages featuring large glass windows with panoramic views of the forest and hills. Equipped with premium amenities.</p>
+                        
+                        <div class="acc-specs">
+                            <span class="acc-spec-item"><i class="fa-solid fa-user-friends"></i> 2-3 Adults</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-bed"></i> King Bed</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-mountain"></i> Forest View</span>
+                        </div>
+                        <button class="acc-gallery-btn" onclick="openRoomGallery('Cottage Room')">
+                            <i class="fa-solid fa-images"></i> View Room Photos (7)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- stay 2 -->
+                <div class="acc-card">
+                    <div class="acc-img-wrap">
+                        <span class="acc-tag">Adventure</span>
+                        <img src="main tent.png" alt="Premium Camping Tent">
+                    </div>
+                    <div class="acc-body">
+                        <h3>Adventure Camping Tent</h3>
+                        <p>Get closer to nature with our waterproof dome camping tents setup on clean lawn platforms. Ideal for star-gazers and couples who love rustic camping.</p>
+                        
+                        <div class="acc-specs">
+                            <span class="acc-spec-item"><i class="fa-solid fa-user-friends"></i> 2 Adults</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-campground"></i> Sleeping Pad</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-fire"></i> Near Campfire</span>
+                        </div>
+                        <button class="acc-gallery-btn" onclick="openSingleImageModal('house.png', 'Adventure Camping Tent Interior')">
+                            <i class="fa-solid fa-image"></i> View Tent Setup
+                        </button>
+                    </div>
+                </div>
+
+                <!-- stay 3 -->
+                <div class="acc-card">
+                    <div class="acc-img-wrap">
+                        <span class="acc-tag">Family</span>
+                        <img src="room.png" alt="Private Villa Cottage">
+                    </div>
+                    <div class="acc-body">
+                        <h3>Private Family Villa</h3>
+                        <p>Spacious, standalone villa offering complete privacy for families and groups. Features large deck overlooking our private fishing pond and estate.</p>
+                        
+                        <div class="acc-specs">
+                            <span class="acc-spec-item"><i class="fa-solid fa-user-friends"></i> Up to 6 Adults</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-border-all"></i> 2 Bedrooms</span>
+                            <span class="acc-spec-item"><i class="fa-solid fa-fish"></i> Pond Facing</span>
+                        </div>
+                        <button class="acc-gallery-btn" onclick="openSingleImageModal('room.png', 'Private Family Villa Exterior')">
+                            <i class="fa-solid fa-image"></i> View Villa Exterior
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section class="section section-bg-dark" id="activities">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Things to Do</p>
+                <h2 class="section-title">Experiences & Activities</h2>
+                <p class="section-desc">Create unforgettable memories with our curated resort activities suitable for friends, couples, and family.</p>
+            </div>
+
+            <div class="act-grid">
+                <!-- Activity 1 -->
+                <div class="act-card">
+                    <div class="act-img-wrap">
+                        <img src="camp fire.jpeg" alt="Campfire nights">
+                    </div>
+                    <div class="act-content">
+                        <i class="fa-solid fa-fire-burner"></i>
+                        <h3>Roaring Bonfire Nights</h3>
+                        <p>Gather around the warm crackle of our community campfire, share stories under the starlit sky, and enjoy light music. Perfect Coorg night experience.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="act-card">
+                    <div class="act-img-wrap">
+                        <img src="fishing.png" alt="Fishing activity">
+                    </div>
+                    <div class="act-content">
+                        <i class="fa-solid fa-fish-fins"></i>
+                        <h3>Pond Fishing & Angling</h3>
+                        <p>Spend a quiet, peaceful afternoon at our fishing pond. Try your hand at catching local freshwater fish. We supply the fishing rods and bait!</p>
+                    </div>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="act-card">
+                    <div class="act-img-wrap">
+                        <img src="food.jpeg" alt="Traditional Food">
+                    </div>
+                    <div class="act-content">
+                        <i class="fa-solid fa-utensils"></i>
+                        <h3>Traditional Local Dining</h3>
+                        <p>Taste the rich spices of Coorg and Malnad. We serve piping hot home-style meals, traditional delicacies, and barbecues freshly roasted to order.</p>
+                    </div>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="act-card">
+                    <div class="act-img-wrap">
+                        <img src="l3.png" alt="Estate Walks">
+                    </div>
+                    <div class="act-content">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                        <h3>Plantation & Nature Walks</h3>
+                        <p>Take guided strolls through our private coffee plantation. Learn how coffee is grown, spot native birds, and breathe in the crisp, unpolluted mountain air.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Visual Tour</p>
+                <h2 class="section-title">Resort Gallery</h2>
+                <p class="section-desc">Take a look at the beautiful moments, scenic views, and comforts waiting for you at Swastik Resort.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item wide" onclick="openLightbox(0)">
+                    <img src="L 1.png" alt="Lush Green Resort Landscape">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="room.png" alt="Cozy Bedroom View">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item tall" onclick="openLightbox(2)">
+                    <img src="tent 1.png" alt="Camping setup under trees">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="camp fire 2.jpeg" alt="Campfire with friends">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item wide" onclick="openLightbox(4)">
+                    <img src="l2.png" alt="Mist covered hills in morning">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="food.jpeg" alt="Delicious Coorg meals">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="fishing.png" alt="Enjoying fishing at the pond">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="l3.png" alt="Trekking pathways in estate">
+                    <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Blossom Resort Campus Section -->
+    <section class="section section-bg-light" id="blossom-campus">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-subtitle">Premium Extension</p>
+                <h2 class="section-title">The Blossom Resort Campus</h2>
+                <p class="section-desc">We are delighted to present our newly added luxury campus. Browse through the images of our new premium suites, pristine pool, and campus views.</p>
+            </div>
+
+            <!-- Category 1: Resort Campus & Aerial Views -->
+            <div class="blossom-category">
+                <h3 class="blossom-cat-title">
+                    <i class="fa-solid fa-hotel"></i> Resort Campus &amp; Aerial Views
+                </h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item wide" onclick="openLightbox(8)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.44 PM.jpeg" alt="Aerial view of the stunning Blossom Resort campus nestled in Coorg greenery">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="blossom-video-item">
+                        <video controls loop muted playsinline>
+                            <source src="new images resort 26-06-2026/WhatsApp Video 2026-06-26 at 2.31.37 PM.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(9)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (1).jpeg" alt="The Blossom Coorg Resort main entrance gate welcomes you">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(10)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM (2).jpeg" alt="Charming ground cottage exterior with cozy verandas">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(11)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM.jpeg" alt="Beautifully paved tiled cottage walkways">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(12)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.46 PM (1).jpeg" alt="Two-story red-brick cottage and main reception area">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(13)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM.jpeg" alt="The Blossom Coorg Resort official logo and welcome board">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Luxury Suites & Rooms -->
+            <div class="blossom-category">
+                <h3 class="blossom-cat-title">
+                    <i class="fa-solid fa-bed"></i> Luxury Suites &amp; Rooms
+                </h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item wide" onclick="openLightbox(14)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.32 PM.jpeg" alt="Luxurious twin-bed room layout with sleek vanity mirror and modern amenities">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(15)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (2).jpeg" alt="Spacious bedroom suite opening directly to the scenic balcony">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(16)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM (1).jpeg" alt="Elegant deluxe double bed suite featuring stylish orange highlight wall">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item wide" onclick="openLightbox(17)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM (2).jpeg" alt="Sophisticated guest room styled with premium polished wood flooring">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(18)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.51 PM.jpeg" alt="Premium suite view showing sliding doors to private sit-out deck">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Swimming Pool & Evening Leisure -->
+            <div class="blossom-category">
+                <h3 class="blossom-cat-title">
+                    <i class="fa-solid fa-person-swimming"></i> Swimming Pool &amp; Evening Leisure
+                </h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item wide" onclick="openLightbox(19)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (3).jpeg" alt="Shimmering crystal clear resort swimming pool under daylight">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(20)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.38 PM.jpeg" alt="Illuminated pool glow at twilight, creating a magical atmosphere">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(21)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.49 PM.jpeg" alt="Night lights reflecting on the calm pool surface next to resort building">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: Verandas & Balconies -->
+            <div class="blossom-category">
+                <h3 class="blossom-cat-title">
+                    <i class="fa-solid fa-mountain-sun"></i> Verandas &amp; Balconies
+                </h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(22)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.32 PM (1).jpeg" alt="Relaxing ground floor veranda seating area running along rooms">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item wide" onclick="openLightbox(23)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.35 PM.jpeg" alt="Upper floor balcony corridors with expansive views of Coorg landscape">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(24)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.46 PM.jpeg" alt="Warm fairy light string glow decorating upper deck balconies at dusk">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 5: Recreation, Dining & Facilities -->
+            <div class="blossom-category">
+                <h3 class="blossom-cat-title">
+                    <i class="fa-solid fa-gamepad"></i> Recreation, Dining &amp; Facilities
+                </h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openLightbox(25)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM (1).jpeg" alt="Vibrant kids play zone with swing sets and multi-slide towers">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(26)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.34 PM.jpeg" alt="Indoor activities room with professional green-felt pool table">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(27)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.47 PM.jpeg" alt="Recreation zone with secondary view of billiards table setup">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item" onclick="openLightbox(28)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM.jpeg" alt="Sleek, well-appointed indoor restaurant dining hall for guests">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="gallery-item wide" onclick="openLightbox(29)">
+                        <img src="new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.48 PM.jpeg" alt="Open-sided, spacious event and conference hall perfect for gatherings">
+                        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Booking Enquiry Section -->
+    <section class="section book-section" id="book">
+        <div class="container book-grid">
+            <div class="book-info">
+                <p class="section-subtitle">Plan Your Visit</p>
+                <h2 class="section-title">Enquire & Book Stay</h2>
+                <p style="margin-bottom: 30px; color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+                    Ready to escape the daily routine? Fill out the reservation enquiry form. It will generate a custom booking text and send it directly to our manager via WhatsApp. We will confirm availability and get back to you instantly!
+                </p>
+
+                <div class="book-contact-list">
+                    <div class="book-contact-item">
+                        <div class="book-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="book-contact-details">
+                            <h4>Location</h4>
+                            <p>Homestay and Resorts, Somwarpet, Coorg, Karnataka 571236</p>
+                        </div>
+                    </div>
+                    <div class="book-contact-item">
+                        <div class="book-contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="book-contact-details">
+                            <h4>Phone / WhatsApp</h4>
+                            <p>
+                                <a href="tel:8073791263" style="color: inherit;">+91 8073791263</a> / <br>
+                                <a href="tel:9632021606" style="color: inherit;">+91 96320 21606</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="book-contact-item">
+                        <div class="book-contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="book-contact-details">
+                            <h4>Email Support</h4>
+                            <p><a href="mailto:swastiktraders1114@gmail.com" style="color: inherit;">swastiktraders1114@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="book-card">
+                <form class="book-form" id="bookingForm" onsubmit="sendBookingEnquiry(event)">
+                    <div class="form-group">
+                        <label for="bookName">Your Name *</label>
+                        <input type="text" id="bookName" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bookPhone">Contact Number *</label>
+                        <input type="tel" id="bookPhone" placeholder="Enter phone number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkIn">Check-In Date *</label>
+                        <input type="date" id="checkIn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkOut">Check-Out Date *</label>
+                        <input type="date" id="checkOut" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guests">Number of Guests *</label>
+                        <select id="guests" required>
+                            <option value="" disabled selected>Select guest count</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6+">6+ Guests (Group)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stayType">Accommodation Preference *</label>
+                        <select id="stayType" required>
+                            <option value="" disabled selected>Select stay type</option>
+                            <option value="Premium Cottage Room">Premium Cottage Room</option>
+                            <option value="Adventure Camping Tent">Adventure Camping Tent</option>
+                            <option value="Private Family Villa">Private Family Villa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label>Activities Interested In</label>
+                        <div class="form-checkboxes">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="activities" value="Campfire"> Campfire Night
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="activities" value="Fishing"> River Pond Fishing
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="activities" value="Local Food"> Traditional Dining
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="activities" value="Plantation Walk"> Estate Trek/Walk
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-group-full">
+                        <label for="specialRequests">Special Requests / Notes</label>
+                        <textarea id="specialRequests" rows="3" placeholder="E.g. Extra bed needed, food preferences, barbecue..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn book-submit-btn">
+                        Submit & Book via WhatsApp <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section" id="location">
+        <div class="container map-flex">
+            <div class="map-details">
+                <p class="section-subtitle">Our Location</p>
+                <h2 class="section-title" style="color: var(--primary);">How to Reach Us</h2>
+                <p style="margin-bottom: 24px; color: var(--text-muted);">We are located in Somwarpet, Coorg. Use the interactive map to navigate directly to Homestay and Resorts.</p>
+                <a href="https://www.google.com/maps/place/12%C2%B026'12.9%22N+75%C2%B043'34.0%22E/@12.4369106,75.7235451,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.4369106!4d75.72612?hl=en&entry=ttu" target="_blank" class="btn btn-primary">
+                    Open in Google Maps <i class="fa-solid fa-map-location-dot"></i>
+                </a>
+            </div>
+             <div class="map-iframe-container" style="position: relative;">
+                <a href="https://www.google.com/maps/place/12%C2%B026'12.9%22N+75%C2%B043'34.0%22E/@12.4369106,75.7235451,17z/data=!3m1!4b1!4m4!3m3!8m2!3d12.4369106!4d75.72612?hl=en&entry=ttu" target="_blank" class="map-overlay-link" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; cursor: pointer;"></a>
+                <iframe 
+                    src="https://maps.google.com/maps?q=12.4369106,75.72612&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="350" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo footer-logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-campground"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name" style="color: var(--white);">Swastiks</span>
+                            <span class="brand-tag">Homestay and Resorts</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        A peaceful nature homestay venture in Somwarpet, Coorg, offering comfortable cottages, river fishing, camping tents and traditional food.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/profile.php?id=61590883978461" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/swastik_traders_coorg/reels/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Resort</a></li>
+                        <li><a href="#accommodations">Accommodations</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#blossom-campus">Blossom Campus</a></li>
+                        <li><a href="javascript:void(0)" onclick="switchSite('main')">Swastik Construction</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Get in Touch</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Homestay and Resorts, Somwarpet, Coorg, Karnataka 571236</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 8073791263<br>+91 96320 21606</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>swastiktraders1114@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Swastiks Homestay and Resorts. All Rights Reserved.</p>
+                <p>An Associated Venture of Swastik Group</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX MODAL -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+            <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg">
+            <button class="lightbox-arrow lightbox-prev" onclick="prevImage()"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="lightbox-arrow lightbox-next" onclick="nextImage()"><i class="fa-solid fa-chevron-right"></i></button>
+            <div class="lightbox-caption" id="lightboxCaption">Caption text</div>
+        </div>
+    </div>
+
+    <!-- ROOM GALLERY MULTIPLE SLIDESHOW MODAL -->
+    <div class="room-gallery-modal" id="roomGalleryModal">
+        <div class="room-gallery-content">
+            <div class="room-gallery-header">
+                <h3 id="roomModalTitle">Room Gallery</h3>
+                <button class="room-gallery-close" onclick="closeRoomGallery()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="room-gallery-body">
+                <div class="room-slideshow">
+                    <img src="room 1.jpeg" class="room-slide-img active" alt="Room View 1">
+                    <img src="room 2.jpeg" class="room-slide-img" alt="Room View 2">
+                    <img src="room 3.jpeg" class="room-slide-img" alt="Room View 3">
+                    <img src="room 4.jpeg" class="room-slide-img" alt="Room View 4">
+                    <img src="room 5.jpeg" class="room-slide-img" alt="Room View 5">
+                    <img src="room 6.jpeg" class="room-slide-img" alt="Room View 6">
+                    <img src="room 7.jpeg" class="room-slide-img" alt="Room View 7">
+                    
+                    <button class="room-slideshow-arrow room-slideshow-prev" onclick="changeRoomSlide(-1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="room-slideshow-arrow room-slideshow-next" onclick="changeRoomSlide(1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="room-slideshow-dots" id="roomSlideshowDots">
+                    <span class="room-dot active" onclick="setRoomSlide(0)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(1)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(2)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(3)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(4)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(5)"></span>
+                    <span class="room-dot" onclick="setRoomSlide(6)"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hero Background Slideshow
+        let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        
+        function rotateHeroBg() {
+            heroSlides[currentHeroSlide].classList.remove('active');
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+            heroSlides[currentHeroSlide].classList.add('active');
+        }
+        setInterval(rotateHeroBg, 5000);
+
+        // Sticky Navbar Scrolled effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('resortNavbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile Nav Menu Toggle
+        const mobileToggle = document.getElementById('resortMobileToggle');
+        const navLinks = document.getElementById('resortNavLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close Mobile Menu on Nav link click
+        document.querySelectorAll('#resortNavLinks a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').classList.remove('fa-xmark');
+                mobileToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+        // Active Link Highlighter on scroll
+        const sections = document.querySelectorAll('#site-resort section');
+        const navItems = document.querySelectorAll('#resortNavLinks a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 120)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === `#${current}`) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Lightbox data
+        const galleryImages = [
+            { src: 'L 1.png', caption: 'Lush Green Resort Landscape' },
+            { src: 'room.png', caption: 'Cozy Bedroom View' },
+            { src: 'tent 1.png', caption: 'Camping setup under trees' },
+            { src: 'camp fire 2.jpeg', caption: 'Campfire with friends' },
+            { src: 'l2.png', caption: 'Mist covered hills in morning' },
+            { src: 'food.jpeg', caption: 'Delicious local cuisine' },
+            { src: 'fishing.png', caption: 'Enjoying fishing by the pond' },
+            { src: 'l3.png', caption: 'Trekking pathways in estate' },
+            // Blossom Campus new images
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.44 PM.jpeg', caption: 'Aerial View of the Resort & Surrounding Forest' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (1).jpeg', caption: 'The Blossom Coorg Resort Main Entrance Gate' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM (2).jpeg', caption: 'Ground Cottage Exterior & Lush Veranda' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM.jpeg', caption: 'Cottage Walkway and Tiled Access Ramps' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.46 PM (1).jpeg', caption: 'Two-Story Red-Brick Cottage & Reception Patio' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM.jpeg', caption: 'The Blossom Coorg Resort Logo' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.32 PM.jpeg', caption: 'Premium Room with Two Double Beds & Vanity Area' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (2).jpeg', caption: 'Luxury Bedroom with Balcony Access' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM (1).jpeg', caption: 'Spacious Suite with Double Beds & Accent Wall' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM (2).jpeg', caption: 'Elegant Bedroom featuring Premium Wooden Flooring' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.51 PM.jpeg', caption: 'Luxury Room with Private Dining Balcony' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.33 PM (3).jpeg', caption: 'Daytime View of Swimming Pool' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.38 PM.jpeg', caption: 'Swimming Pool Evening Illumination' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.49 PM.jpeg', caption: 'Night Poolside View of Resort Main Building' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.32 PM (1).jpeg', caption: 'Ground Floor Veranda Corridor Seating' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.35 PM.jpeg', caption: 'Upper Balcony Passage overlooking Coffee Estate' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.46 PM.jpeg', caption: 'Evening Balcony Corridor with Ambient Fairy Lights' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.31 PM (1).jpeg', caption: 'Outdoor Kids Play Ground with Swings & Slide' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.34 PM.jpeg', caption: 'Indoor Games Room with Billiards/Pool Table' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.47 PM.jpeg', caption: 'Recreation Lounge & Pool Table Area' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.43 PM.jpeg', caption: 'Spacious Indoor Restaurant Dining Hall' },
+            { src: 'new images resort 26-06-2026/WhatsApp Image 2026-06-26 at 2.31.48 PM.jpeg', caption: 'Covered Open-Air Event & Conference Hall' }
+        ];
+        
+        let activeLightboxIdx = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        function openLightbox(idx) {
+            activeLightboxIdx = idx;
+            updateLightbox();
+            lightbox.style.display = 'flex';
+        }
+
+        function updateLightbox() {
+            lightboxImg.src = galleryImages[activeLightboxIdx].src;
+            lightboxCaption.textContent = galleryImages[activeLightboxIdx].caption;
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+
+        function prevImage() {
+            activeLightboxIdx = (activeLightboxIdx - 1 + galleryImages.length) % galleryImages.length;
+            updateLightbox();
+        }
+
+        function nextImage() {
+            activeLightboxIdx = (activeLightboxIdx + 1) % galleryImages.length;
+            updateLightbox();
+        }
+
+        function openSingleImageModal(src, caption) {
+            lightboxImg.src = src;
+            lightboxCaption.textContent = caption;
+            // hide arrows
+            document.querySelector('.lightbox-prev').style.display = 'none';
+            document.querySelector('.lightbox-next').style.display = 'none';
+            lightbox.style.display = 'flex';
+        }
+
+        // Close lightbox when clicking outside image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+                // restore arrows display just in case
+                document.querySelector('.lightbox-prev').style.display = 'flex';
+                document.querySelector('.lightbox-next').style.display = 'flex';
+            }
+        });
+
+        // Room Gallery Slideshow popup logic
+        let currentRoomSlideIdx = 0;
+        const roomSlides = document.querySelectorAll('.room-slide-img');
+        const roomDots = document.querySelectorAll('.room-dot');
+        const roomGalleryModal = document.getElementById('roomGalleryModal');
+
+        function openRoomGallery(roomTitle) {
+            document.getElementById('roomModalTitle').textContent = roomTitle + ' Photos';
+            currentRoomSlideIdx = 0;
+            updateRoomSlideshow();
+            roomGalleryModal.style.display = 'flex';
+        }
+
+        function closeRoomGallery() {
+            roomGalleryModal.style.display = 'none';
+        }
+
+        function changeRoomSlide(dir) {
+            roomSlides[currentRoomSlideIdx].classList.remove('active');
+            roomDots[currentRoomSlideIdx].classList.remove('active');
+            
+            currentRoomSlideIdx = (currentRoomSlideIdx + dir + roomSlides.length) % roomSlides.length;
+            
+            roomSlides[currentRoomSlideIdx].classList.add('active');
+            roomDots[currentRoomSlideIdx].classList.add('active');
+        }
+
+        function setRoomSlide(idx) {
+            roomSlides[currentRoomSlideIdx].classList.remove('active');
+            roomDots[currentRoomSlideIdx].classList.remove('active');
+            
+            currentRoomSlideIdx = idx;
+            
+            roomSlides[currentRoomSlideIdx].classList.add('active');
+            roomDots[currentRoomSlideIdx].classList.add('active');
+        }
+
+        function updateRoomSlideshow() {
+            roomSlides.forEach((slide, idx) => {
+                if (idx === currentRoomSlideIdx) {
+                    slide.classList.add('active');
+                    roomDots[idx].classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                    roomDots[idx].classList.remove('active');
+                }
+            });
+        }
+
+        roomGalleryModal.addEventListener('click', (e) => {
+            if (e.target === roomGalleryModal) {
+                closeRoomGallery();
+            }
+        });
+
+        // WhatsApp Booking Form Integration
+        function sendBookingEnquiry(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('bookName').value.trim();
+            const phone = document.getElementById('bookPhone').value.trim();
+            const checkIn = document.getElementById('checkIn').value;
+            const checkOut = document.getElementById('checkOut').value;
+            const guests = document.getElementById('guests').value;
+            const stayType = document.getElementById('stayType').value;
+            const specialRequests = document.getElementById('specialRequests').value.trim();
+
+            // Collect selected activities
+            const activityCheckboxes = document.querySelectorAll('input[name="activities"]:checked');
+            const selectedActivities = [];
+            activityCheckboxes.forEach(cb => {
+                selectedActivities.push(cb.value);
+            });
+
+            let activitiesStr = selectedActivities.length > 0 ? selectedActivities.join(', ') : 'None selected';
+
+            // Construct Message
+            let message = `Hello Swastik Wilderness Resort! I would like to enquire about a booking:\n\n` +
+                          `*Name:* ${name}\n` +
+                          `*Phone:* ${phone}\n` +
+                          `*Accommodation:* ${stayType}\n` +
+                          `*Check-In:* ${checkIn}\n` +
+                          `*Check-Out:* ${checkOut}\n` +
+                          `*Guests:* ${guests}\n` +
+                          `*Activities Interested:* ${activitiesStr}\n`;
+
+            if (specialRequests) {
+                message += `*Special Requests:* ${specialRequests}`;
+            }
+
+            // WhatsApp link redirection
+            const whatsappUrl = `https://wa.me/918073791263?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Contact Modal Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactModal = document.getElementById('resortContactModal');
+            const closeContactModal = document.getElementById('resortCloseContactModal');
+            const contactTriggers = document.querySelectorAll('.resort-contact-trigger-btn');
+
+            if (contactTriggers && contactModal && closeContactModal) {
+                contactTriggers.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        contactModal.style.display = 'flex';
+                    });
+                });
+
+                closeContactModal.addEventListener('click', () => {
+                    contactModal.style.display = 'none';
+                });
+
+                window.addEventListener('click', (e) => {
+                    if (e.target === contactModal) {
+                        contactModal.style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+
+    <!-- Resort Modals moved to bottom of body -->
+    <!-- Resort Callout Badge (LEFT SIDE, shown only on resort site) -->
+    <div class="taxi-callout-badge resort-contact-trigger-btn" id="resortCalloutBadge" style="display:none">
+        <i class="fa-solid fa-phone shake-ring"></i> Call Now
+    </div>
+
+    <!-- Swastik Group Callout Badge -->
+    <div class="group-callout-badge" id="groupCalloutBadge" style="display:none" onclick="switchSite('main')">
+        Swastik Group, Take a Look <i class="fa-solid fa-arrow-right"></i>
+    </div>
+
+    <!-- Swastik Group Construction Site Widget -->
+    <a href="javascript:void(0)" onclick="switchSite('main')" class="group-widget" style="text-decoration: none;">
+        <div class="group-tab">
+            <span class="group-tab-sub">Our Parent Enterprise</span>
+            <span class="group-tab-title">Swastik Group</span>
+            <i class="fa-solid fa-chevron-left group-icon"></i>
+        </div>
+        <div class="group-img-wrap">
+            <img src="hero.png" alt="Swastik Group Construction">
+        </div>
+    </a>
+
+</div>
+
+<!-- ==========================================
+     GLOBAL OVERLAYS & MODALS
+     (Moved outside site containers to prevent 
+      visibility issues due to hidden parents)
+     ========================================== -->
+
+<!-- CONTACT MODAL -->
+<div class="contact-modal-overlay" id="contactModal">
+    <div class="contact-modal-content">
+        <button class="contact-modal-close" id="closeContactModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="contact-modal-header">
+            <i class="fa-solid fa-phone-volume contact-modal-icon shake-ring"></i>
+            <h3>Contact Swastik Group</h3>
+            <p>Call or message us directly on WhatsApp</p>
+        </div>
+        <div class="contact-numbers-container">
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text">INCOMING CALL...</div>
+                    <div class="incoming-call-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-number-name">Helpline 1</div>
+                    <div class="contact-number-value">+91 8073791263</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text">INCOMING CALL...</div>
+                    <div class="incoming-call-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-number-name">Helpline 2</div>
+                    <div class="contact-number-value">+91 96320 21606</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:9632021606" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/919632021606" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HOTEL MODAL (VIDEO & MENU) -->
+<div class="hotel-modal-overlay" id="hotelModal">
+    <div class="hotel-modal-content">
+        <button class="hotel-modal-close" id="closeHotelModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="hotel-modal-header">
+            <h3>SWASTIKS HOTEL & RESTAURANT</h3>
+            <p>Experience exquisite dining & premium boarding in Somwarpet</p>
+        </div>
+        <div class="hotel-modal-body">
+            <div class="hotel-modal-video-col">
+                <h4 class="hotel-sub-title"><i class="fa-solid fa-play"></i> Watch Video Tour</h4>
+                <div class="hotel-video-wrapper">
+                    <video id="hotelPromoVideo" controls loop muted playsinline>
+                        <source src="hotel video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="hotel-modal-menu-col">
+                <h4 class="hotel-sub-title"><i class="fa-solid fa-file-invoice"></i> Menu Card</h4>
+                <div class="hotel-menu-wrapper">
+                    <img src="hotel menu.png" alt="Swastiks Hotel Menu" class="hotel-menu-img" id="hotelMenuImg">
+                    <div class="hotel-menu-zoom-hint">
+                        <i class="fa-solid fa-magnifying-glass-plus"></i> Click to Zoom Menu
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MENU ZOOM LIGHTBOX -->
+<div class="menu-zoom-overlay" id="menuZoomOverlay">
+    <img src="hotel menu.png" alt="Zoomed Menu Card">
+</div>
+
+<!-- TAXI MODAL -->
+<div class="contact-modal-overlay" id="taxiModal">
+    <div class="contact-modal-content">
+        <button class="contact-modal-close" id="closeTaxiModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="contact-modal-header">
+            <i class="fa-solid fa-taxi contact-modal-icon shake-ring" style="color: #ffd700;"></i>
+            <h3>Swastiks Taxi Service</h3>
+            <p>24/7 Travel &amp; Sightseeing Cabs in Coorg</p>
         </div>
         
-        <a href="#menu" class="btn-explore-cakes">
-          EXPLORE CAKES
-          <span class="btn-arrow-circle">›</span>
-        </a>
-      </div>
-    </div>
-
-    <div class="hero-right-image">
-      <div class="hero-image-slides">
-        <div class="hero-image-slide active" style="background-image: url('ChatGPT Image May 16, 2026, 01_14_44 PM.png');"></div>
-        <div class="hero-image-slide" style="background-image: url('ChatGPT Image May 16, 2026, 01_14_57 PM.png');"></div>
-        <div class="hero-image-slide" style="background-image: url('ChatGPT Image May 16, 2026, 01_15_12 PM.png');"></div>
-        <div class="hero-image-slide" style="background-image: url('ChatGPT Image May 16, 2026, 01_15_06 PM.png');"></div>
-      </div>
-      <div class="hero-image-overlay"></div>
-    </div>
-  </section>
-
-
-  <!-- ===== MARQUEE ===== -->
-  <div class="marquee-bar">
-    <div class="marquee-track">
-      <span>🎂 Birthday Cakes</span><span>💍 Wedding Cakes</span><span>🎉 Custom Orders</span>
-      <span>🧁 Cupcakes</span><span>🍰 Pastries</span><span>✨ Live Cake Making</span>
-      <span>🎂 Birthday Cakes</span><span>💍 Wedding Cakes</span><span>🎉 Custom Orders</span>
-      <span>🧁 Cupcakes</span><span>🍰 Pastries</span><span>✨ Live Cake Making</span>
-    </div>
-  </div>
-
-
-  <!-- ===== FLOATING CAKE ANIMATION (fixed left edge) ===== -->
-  <div id="aboutCakeImgWrap" class="cake-widget-fixed">
-    <div class="cake-anim-container">
-      <div class="cake-sparkles">
-        <span class="sparkle s-1">✨</span>
-        <span class="sparkle s-2">✨</span>
-        <span class="sparkle s-3">✨</span>
-      </div>
-      <div class="decor topping-1">🍓</div>
-      <div class="decor topping-2">🍓</div>
-      <div class="decor topping-3">🍓</div>
-      <div class="cake-layer cake-glaze"></div>
-      <div class="cake-layer cake-sponge-3"></div>
-      <div class="cake-layer cake-cream-2"></div>
-      <div class="cake-layer cake-sponge-2"></div>
-      <div class="cake-layer cake-cream-1"></div>
-      <div class="cake-layer cake-sponge-1"></div>
-      <div class="cake-stand"></div>
-    </div>
-  </div>
-
-  <!-- ===== ABOUT US ===== -->
-  <section id="about" class="about">
-    <div class="container">
-      
-      <!-- Added Mixed Color Text Above the 3D Section -->
-      <div class="happy-bday-header reveal">
-        <h2 class="colorful-bday-text">Happy Birthday</h2>
-        <p class="bday-subtext">“Today’s sweetest choice by our happy customers.”</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-img-wrap reveal" id="about3DZone">
-          <div class="about-img-placeholder custom-cake-container">
-            <img src="coustom.png" alt="Custom Cake" class="story-cake-img" />
-            <!-- 3D Illusion 2D Assets -->
-            <div class="butterfly b1"><div class="wing left-wing"></div><div class="wing right-wing"></div></div>
-            <div class="butterfly b2"><div class="wing left-wing"></div><div class="wing right-wing"></div></div>
-            <div class="butterfly b3"><div class="wing left-wing"></div><div class="wing right-wing"></div></div>
-            
-            <!-- Sparkles -->
-            <div class="sparkle-3d s1">✨</div>
-            <div class="sparkle-3d s2">✨</div>
-            <div class="sparkle-3d s3">✨</div>
-            
-            <!-- Flowers & Toys -->
-            <div class="decor-3d d1">🌸</div>
-            <div class="decor-3d d2">🧸</div>
-            <div class="decor-3d d3">🌺</div>
-            <div class="decor-3d d4">🎈</div>
-            <div class="decor-3d d5">🌼</div>
-            <div class="decor-3d d6">🎁</div>
-          </div>
-          <div class="about-badge-float">
-            <span class="ab-num">45+</span>
-            <span class="ab-label">Years of<br>Experience</span>
-          </div>
-        </div>
-        <div class="about-content reveal">
-          <p class="section-eyebrow">✦ OUR STORY</p>
-          <h2 class="section-title princess-title">A Magical Princess Cake For Your Special Day</h2>
-          <p class="about-desc">
-            This beautiful princess-themed custom cake was specially created for our lovely customer to make their celebration extra magical and memorable. Designed with elegant pink shades, butterflies, sparkling details, and a charming doll topper, every part of this cake was made with love, creativity, and care to bring happiness to their special day.
-          </p>
-          <div class="about-features">
-            <div class="af-item">
-              <div class="af-icon">👨‍🍳</div>
-              <div>
-                <strong>Master Bakers</strong>
-                <p>Generations of expertise in every recipe.</p>
-              </div>
+        <div style="margin: 20px 0; border-radius: 12px; overflow: hidden; border: 1px solid #333;">
+            <img src="taxi_car.png" alt="Swastiks Taxi" style="width: 100%; height: 160px; object-fit: cover;">
+            <div style="padding: 15px; background: #111; text-align: left;">
+                <h4 style="color: #ffd700; margin-bottom: 5px; font-size: 0.95rem; font-weight: 700;">Karnataka Registered Cabs</h4>
+                <p style="color: #aaa; font-size: 0.8rem; margin: 0; line-height: 1.4;">Comfortable sedans and hatchbacks with experienced local tourist drivers. Available for airport drops, local sightseeing, and outstation trips.</p>
             </div>
-            <div class="af-item">
-              <div class="af-icon">✨</div>
-              <div>
-                <strong>Live Cake Making</strong>
-                <p>Watch your custom cakes being created fresh.</p>
-              </div>
+        </div>
+
+        <div class="contact-numbers-container">
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text" style="color: #ffd700;">TAXI BOOKING...</div>
+                    <div class="incoming-call-icon" style="background: #ffd700; color: #000;"><i class="fa-solid fa-taxi"></i></div>
+                    <div class="contact-number-name">Booking Helpline</div>
+                    <div class="contact-number-value">+91 8073791263</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
-            <div class="af-item">
-              <div class="af-icon">🏆</div>
-              <div>
-                <strong>Premium Quality</strong>
-                <p>Only the finest ingredients for the best taste.</p>
-              </div>
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text" style="color: #ffd700;">TAXI BOOKING...</div>
+                    <div class="incoming-call-icon" style="background: #ffd700; color: #000;"><i class="fa-solid fa-taxi"></i></div>
+                    <div class="contact-number-name">Support Helpline</div>
+                    <div class="contact-number-value">+91 96320 21606</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:9632021606" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/919632021606" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </section>
+</div>
 
-  <!-- ===== CAKES & MORE ===== -->
-  <section id="menu" class="menu">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">✨ OUR DELICIOUS RANGE ✨</p>
-        <h2 class="section-title">CAKES &amp; MORE</h2>
-      </div>
-      <div class="menu-grid-4col">
-
-        <!-- 1. Malayi Kulfi (Special Unique) -->
-        <div class="menu-card special-unique-card reveal">
-          <div class="mc-img-wrap">
-            <img src="malayi kulfi[our special-unique].png" alt="Malayi Kulfi" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--special">★ Special Unique</div>
-            <div class="mc-price">₹1200 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>MALAYI KULFI</h3>
-            <p>Our signature premium fusion cake crafted with authentic kulfi richness.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 2. Chocolate Truffle -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="chocolate truffle.png" alt="Chocolate Truffle" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--yellow">Bestseller</div>
-            <div class="mc-price">₹900 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>CHOCOLATE TRUFFLE</h3>
-            <p>Decadent chocolate sponge smothered in silky dark ganache.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 3. Red Velvet -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="red velvet.png" alt="Red Velvet" class="menu-cake-img" />
-            <div class="mc-tag">Classic</div>
-            <div class="mc-price">₹900 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>RED VELVET</h3>
-            <p>Crimson soft layers with luxurious cream cheese frosting.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 4. Spanish Delight -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="spanish delight.png" alt="Spanish Delight" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--premium">⭐ Premium</div>
-            <div class="mc-price">₹1100 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>SPANISH DELIGHT</h3>
-            <p>Indulgent caramel layers with a rich Spanish-style cream finish.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 5. Spanish Delight 2 -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="spanish delight 2.png" alt="Spanish Delight II" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--premium">⭐ Premium</div>
-            <div class="mc-price">₹1100 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>SPANISH DELIGHT II</h3>
-            <p>A delightful variation of our Spanish classic with a unique cream blend.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 6. Vancho -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="vancho.png" alt="Vancho" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--new">New</div>
-            <div class="mc-price">₹900 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>VANCHO</h3>
-            <p>Perfect harmony of rich chocolate and velvety vanilla layers.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 7. Butter Scotch -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="butter scoch.png" alt="Butter Scotch" class="menu-cake-img" />
-            <div class="mc-tag">Classic</div>
-            <div class="mc-price">₹900 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>BUTTER SCOTCH</h3>
-            <p>Crunchy butterscotch praline with rich whipped caramel cream.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 8. Black Forest -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="black forest.png" alt="Black Forest" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--value">Best Value</div>
-            <div class="mc-price">₹700 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>BLACK FOREST</h3>
-            <p>Traditional recipe with dark cherries and fresh whipped cream.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 9. Nutty Fantasy -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="nutty fantacy.png" alt="Nutty Fantasy" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--premium">⭐ Premium</div>
-            <div class="mc-price">₹1200 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>NUTTY FANTASY</h3>
-            <p>Rich sponge layered with cashew, almond, and premium cream.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 10. Honey Coconut -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="honey coconut.png" alt="Honey Coconut" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--new">New</div>
-            <div class="mc-price">₹1000 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>HONEY COCONUT</h3>
-            <p>Tropical coconut layers drizzled with pure golden honey glaze.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 11. Honey Coconut Crunchy -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="honey coconut crunchi.png" alt="Honey Coconut Crunchy" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--new">New</div>
-            <div class="mc-price">₹1100 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>HONEY COCONUT CRUNCHY</h3>
-            <p>Extra crunch with toasted coconut flakes and honey caramel drizzle.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 12. Milky Nut -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="milky nut.png" alt="Milky Nut" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--premium">⭐ Premium</div>
-            <div class="mc-price">₹1100 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>MILKY NUT</h3>
-            <p>Creamy milk-based sponge studded with a blend of premium nuts.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 13. Pineapple -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="pineapple.png" alt="Pineapple" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--yellow">Bestseller</div>
-            <div class="mc-price">₹800 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>PINEAPPLE</h3>
-            <p>Light fluffy sponge with fresh pineapple chunks and whipped cream.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-        <!-- 14. Red Beauty -->
-        <div class="menu-card reveal">
-          <div class="mc-img-wrap">
-            <img src="red be.png" alt="Red Beauty" class="menu-cake-img" />
-            <div class="mc-tag mc-tag--new">New</div>
-            <div class="mc-price">₹1000 / kg</div>
-          </div>
-          <div class="mc-body">
-            <h3>RED BEAUTY</h3>
-            <p>Striking red layered cake with a smooth and velvety cream centre.</p>
-            <a href="#contact" class="btn-shop-now">ORDER NOW</a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="view-all-wrapper reveal">
-        <a href="#contact" class="btn-view-all">VIEW ALL PRODUCTS ➔</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BAKING AREA SHOWCASE (VIDEO) ===== -->
-  <section class="video-showcase" id="bakingStory">
-    <div class="container">
-      <div class="baking-split-grid">
-        <div class="baking-text-side">
-          <p class="baking-eyebrow" id="bakingEye">🏠 OUR BAKING AREA</p>
-          <h2 class="baking-headline" id="bakingLine1">Where Every Cake<br/><span>Is Born with Love</span></h2>
-          <div class="baking-stat" id="bakingLine2">
-            <span class="baking-num">45<sup>+</sup></span>
-            <span class="baking-stat-label">Years of Tradition</span>
-          </div>
-          <p class="baking-tagline" id="bakingLine3">Every Slice Tells a Story</p>
-          <p class="baking-sub" id="bakingLine4">We are one of the most beloved traditional bakeries in Ulikkal — crafting joy since generations.</p>
-          <a href="#contact" class="baking-cta" id="bakingCTA">Visit Us Today ➔</a>
+<!-- PROPERTIES MODAL -->
+<div class="contact-modal-overlay" id="propertiesModal">
+    <div class="properties-modal-content">
+        <button class="properties-modal-close" id="closePropertiesModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="contact-modal-header" style="text-align: center;">
+            <i class="fa-solid fa-house-chimney contact-modal-icon shake-ring" style="color: #4caf7d; font-size: 2.2rem; margin-bottom: 10px; display: inline-block;"></i>
+            <h3 style="color: #fff; font-size: 1.5rem; font-weight: 700; margin: 0 0 5px 0;">Swastik Properties</h3>
+            <p style="color: #aaa; font-size: 0.85rem; margin: 0;">Premium Estates, Plots &amp; Properties for Sale in Coorg</p>
         </div>
         
-        <div class="baking-video-side">
-          <video autoplay loop muted playsinline class="baking-inline-video">
-            <source src="colorvid.mp4" type="video/mp4"/>
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TESTIMONIALS (SWEET FEEDBACK) ===== -->
-  <section id="testimonials" class="testimonials">
-    <div class="container relative">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">✨ WHAT OUR CUSTOMERS SAY ✨</p>
-        <h2 class="section-title text-dark">SWEET FEEDBACK</h2>
-        <a href="https://share.google/EZYRUY0lMseKsX7T8" target="_blank" class="btn-google-reviews">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" style="width:16px; display:inline-block; margin-right:8px; vertical-align:middle;">
-          View our Google Reviews
-        </a>
-      </div>
-      
-      <!-- Carousel controls -->
-      <button class="testi-ctrl ctrl-left" aria-label="Previous Testimonial">‹</button>
-      <button class="testi-ctrl ctrl-right" aria-label="Next Testimonial">›</button>
-
-      <div class="testi-grid" id="dynamic-reviews-grid">
-        <!-- Reviews will be dynamically inserted here via script.js -->
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <p class="section-eyebrow">✦ Get In Touch</p>
-        <h2 class="section-title">Contact Us</h2>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <div class="ci-item">
-            <div class="ci-icon">📍</div>
-            <div><strong>Location</strong><p>Main Road, Ulikkal Town,<br/>670705, Kerala</p></div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">📞</div>
-            <div>
-              <strong>Quick Contact</strong>
-              <div style="display: flex; gap: 10px; margin-top: 10px; flex-direction: column;">
-                <a href="tel:+918921059594" class="contact-action-btn phone-btn">📞 Call: +91 89210 59594</a>
-                <a href="https://wa.me/918921059594" class="contact-action-btn wa-btn">💬 Message on WhatsApp</a>
-              </div>
+        <div class="properties-list-container">
+            <!-- Property 1: Coffee Estate -->
+            <div class="properties-modal-card">
+                <div class="properties-modal-card-img">
+                    <img src="prop_estate.png" alt="Swastik Coffee Retreat">
+                    <span class="properties-modal-tag">For Sale</span>
+                </div>
+                <div class="properties-modal-card-body">
+                    <span class="properties-modal-card-type"><i class="fa-solid fa-seedling"></i> Agriculture</span>
+                    <h4 class="properties-modal-card-title">Swastik Coffee Retreat</h4>
+                    <p class="properties-modal-card-loc"><i class="fa-solid fa-location-dot"></i> Near Somwarpet, Coorg</p>
+                    <p class="properties-modal-card-desc">Rich yielding Arabica &amp; Robusta coffee estate with pepper and cardamom cultivation. Includes a vintage homestay building.</p>
+                    <div class="properties-modal-card-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px;"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263?text=Hi,%20I%20am%20interested%20in%20Swastik%20Coffee%20Retreat" target="_blank" class="contact-action-btn whatsapp" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px; background: #25d366; color: #fff; border-color: #25d366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="ci-item">
-            <div class="ci-icon">⏰</div>
-            <div><strong>Opening Hours</strong><p>Monday – Sunday: 8 AM – 9 PM</p></div>
-          </div>
 
-          <div class="social-links">
-            <a href="https://wa.me/918921059594" class="social-btn social-btn--wa" aria-label="WhatsApp">💬 WhatsApp</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-logo">
-            <span class="logo-icon">🎂</span>
-            <div class="logo-text">
-              <span class="logo-main">Oriental Bakery Ulikkal</span>
-              <span class="logo-sub">Live Cake</span>
+            <!-- Property 2: Plot -->
+            <div class="properties-modal-card">
+                <div class="properties-modal-card-img">
+                    <img src="prop_commercial.png" alt="Swastik Plots">
+                    <span class="properties-modal-tag">For Sale</span>
+                </div>
+                <div class="properties-modal-card-body">
+                    <span class="properties-modal-card-type"><i class="fa-solid fa-map"></i> Land / Plots</span>
+                    <h4 class="properties-modal-card-title">Premium Residential Plots</h4>
+                    <p class="properties-modal-card-loc"><i class="fa-solid fa-location-dot"></i> Somwarpet Town, Coorg</p>
+                    <p class="properties-modal-card-desc">Fully developed residential plots with water connection, electric lines, tar road access, and clear titles. Ready for construction.</p>
+                    <div class="properties-modal-card-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px;"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263?text=Hi,%20I%20am%20interested%20in%20Premium%20Residential%20Plots" target="_blank" class="contact-action-btn whatsapp" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px; background: #25d366; color: #fff; border-color: #25d366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="footer-tagline">Where every celebration becomes a masterpiece. Premium live cakes crafted with passion in Ulikkal Town.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#menu">Our Cakes</a></li>
-            <li><a href="#contact">Order Now</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Our Specialties</h4>
-          <ul>
-            <li><a href="#menu">Birthday Cakes</a></li>
-            <li><a href="#menu">Wedding Cakes</a></li>
-            <li><a href="#menu">Custom Art Cakes</a></li>
-            <li><a href="#menu">Cupcakes</a></li>
-            <li><a href="#menu">Live Baking</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Find Us</h4>
-          <p>📍 Main Road, Ulikkal Town<br/>670705, Kerala, India</p>
-          <p>📞 <a href="tel:+918921059594">+91 89210 59594</a></p>
-          <p>⏰ Mon–Sun: 8AM – 9PM</p>
-          <div class="footer-map">
-            <iframe title="Oriental Live Cake Location – Ulikkal" src="https://maps.google.com/maps?q=Oriental+Live+Cakes,+Ulikkal&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 Oriental Bakery Ulikkal. All Rights Reserved. | Ulikkal Town, 670705</p>
-        <p class="footer-love">Made with ❤️ & 🎂 in Kerala</p>
-      </div>
-    </div>
-  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+            <!-- Property 3: Villa/Property -->
+            <div class="properties-modal-card">
+                <div class="properties-modal-card-img">
+                    <img src="prop_villa.png" alt="Swastik Luxury Villa">
+                    <span class="properties-modal-tag">For Sale</span>
+                </div>
+                <div class="properties-modal-card-body">
+                    <span class="properties-modal-card-type"><i class="fa-solid fa-building"></i> Villa / Property</span>
+                    <h4 class="properties-modal-card-title">Luxury Hillview Villa</h4>
+                    <p class="properties-modal-card-loc"><i class="fa-solid fa-location-dot"></i> Near Somwarpet, Coorg</p>
+                    <p class="properties-modal-card-desc">Modern architect-designed villa property. Ideal for luxury homestay business or a scenic vacation retreat with high potential.</p>
+                    <div class="properties-modal-card-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px;"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263?text=Hi,%20I%20am%20interested%20in%20Luxury%20Hillview%20Villa" target="_blank" class="contact-action-btn whatsapp" style="flex: 1; text-align: center; justify-content: center; font-size: 0.75rem; padding: 8px 10px; background: #25d366; color: #fff; border-color: #25d366;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RESORT CONTACT MODAL -->
+<div class="contact-modal-overlay" id="resortContactModal">
+    <div class="contact-modal-content">
+        <button class="contact-modal-close" id="resortCloseContactModal"><i class="fa-solid fa-xmark"></i></button>
+        <div class="contact-modal-header">
+            <i class="fa-solid fa-phone-volume contact-modal-icon shake-ring"></i>
+            <h3>Contact Swastiks Homestay and Resorts</h3>
+            <p>Call or message us directly on WhatsApp</p>
+        </div>
+        <div class="contact-numbers-container">
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text">INCOMING CALL...</div>
+                    <div class="incoming-call-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-number-name">Manager Helpline</div>
+                    <div class="contact-number-value">+91 8073791263</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:8073791263" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/918073791263" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-number-card phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-notch"></div>
+                    <div class="incoming-text">INCOMING CALL...</div>
+                    <div class="incoming-call-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="contact-number-name">Booking Support</div>
+                    <div class="contact-number-value">+91 96320 21606</div>
+                    <div class="contact-number-actions">
+                        <a href="tel:9632021606" class="contact-action-btn call btn-ring"><i class="fa-solid fa-phone"></i> Call Now</a>
+                        <a href="https://wa.me/919632021606" target="_blank" class="contact-action-btn whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
 </body>
+<script src="cloud-products.js"></script>
 </html>
